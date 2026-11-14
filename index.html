@@ -111,6 +111,7 @@
       <a href="#how" data-t="nav_how">How it works</a>
       <a href="#price" data-t="nav_price">Price</a>
       <a href="#download" data-t="nav_dl">Download</a>
+      <a href="#forum" data-t="nav_forum">Forum</a>
     </nav>
     <div class="lang">
       <select id="lang" aria-label="language">
@@ -213,6 +214,24 @@
         <h3 data-t="dll_h">USB system (Linux)</h3>
         <p data-t="dll_p">The image to write to a USB stick and boot any PC.</p>
         <a class="btn" href="#" data-t="dll_b">Download USB image</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="forum">
+    <div class="sec-k" data-t="forum_k">COMMUNITY</div>
+    <h2 class="sec-h glow" data-t="forum_h">Join the forum</h2>
+    <p class="sec-p" data-t="forum_p">Share your opinions, ask questions, and report problems. We read everything.</p>
+    <div class="dl">
+      <div class="card">
+        <h3 data-t="forum_ch1">Opinions &amp; questions</h3>
+        <p data-t="forum_cp1">Ideas, doubts, how-to — talk with other musicians.</p>
+        <a class="btn" href="https://github.com/AliduRealLooper/AliduRealLooper.github.io/discussions" data-t="forum_b1">Open the forum</a>
+      </div>
+      <div class="card">
+        <h3 data-t="forum_ch2">Report a problem</h3>
+        <p data-t="forum_cp2">Found a bug? Tell us here, one report at a time.</p>
+        <a class="btn ghost" href="https://github.com/AliduRealLooper/AliduRealLooper.github.io/issues" data-t="forum_b2">Report a problem</a>
       </div>
     </div>
   </section>
@@ -410,6 +429,17 @@ const T = {
     foot:"صُنع للموسيقيين. © 2026 Dario Amabile. كل الحقوق محفوظة.",
     price_big:"٢٠٠ ﷼",price_sub:"مرة واحدة · يشمل تحديثات مجانية",price_multi:"≈ $54 · €49 · £42 · ¥390 · ₽4900"}
 };
+
+const FT = {
+  en:{nav_forum:"Forum",forum_k:"COMMUNITY",forum_h:"Join the forum",forum_p:"Share your opinions, ask questions, and report problems. We read everything.",forum_ch1:"Opinions & questions",forum_cp1:"Ideas, doubts, how-to — talk with other musicians.",forum_b1:"Open the forum",forum_ch2:"Report a problem",forum_cp2:"Found a bug? Tell us here, one report at a time.",forum_b2:"Report a problem"},
+  it:{nav_forum:"Forum",forum_k:"COMUNITÀ",forum_h:"Entra nel forum",forum_p:"Scrivi le tue opinioni, fai domande e segnala i problemi. Leggiamo tutto.",forum_ch1:"Opinioni e domande",forum_cp1:"Idee, dubbi, consigli — parla con altri musicisti.",forum_b1:"Apri il forum",forum_ch2:"Segnala un problema",forum_cp2:"Hai trovato un errore? Dillo qui, una segnalazione per volta.",forum_b2:"Segnala un problema"},
+  de:{nav_forum:"Forum",forum_k:"COMMUNITY",forum_h:"Zum Forum",forum_p:"Teile deine Meinung, stelle Fragen und melde Probleme. Wir lesen alles.",forum_ch1:"Meinungen & Fragen",forum_cp1:"Ideen, Zweifel, Tipps — rede mit anderen Musikern.",forum_b1:"Forum öffnen",forum_ch2:"Problem melden",forum_cp2:"Einen Fehler gefunden? Melde ihn hier, einen nach dem anderen.",forum_b2:"Problem melden"},
+  fr:{nav_forum:"Forum",forum_k:"COMMUNAUTÉ",forum_h:"Rejoindre le forum",forum_p:"Partagez vos avis, posez des questions et signalez les problèmes. Nous lisons tout.",forum_ch1:"Avis & questions",forum_cp1:"Idées, doutes, astuces — échangez avec d'autres musiciens.",forum_b1:"Ouvrir le forum",forum_ch2:"Signaler un problème",forum_cp2:"Un bug ? Dites-le ici, un signalement à la fois.",forum_b2:"Signaler un problème"},
+  zh:{nav_forum:"论坛",forum_k:"社区",forum_h:"加入论坛",forum_p:"分享你的看法、提出问题、反馈问题。我们都会看。",forum_ch1:"看法与提问",forum_cp1:"想法、疑问、技巧——与其他音乐人交流。",forum_b1:"打开论坛",forum_ch2:"反馈问题",forum_cp2:"发现了错误？在这里告诉我们，一次一条。",forum_b2:"反馈问题"},
+  ru:{nav_forum:"Форум",forum_k:"СООБЩЕСТВО",forum_h:"Войти на форум",forum_p:"Делитесь мнениями, задавайте вопросы и сообщайте о проблемах. Мы читаем всё.",forum_ch1:"Мнения и вопросы",forum_cp1:"Идеи, сомнения, советы — общайтесь с музыкантами.",forum_b1:"Открыть форум",forum_ch2:"Сообщить о проблеме",forum_cp2:"Нашли ошибку? Напишите здесь, по одной за раз.",forum_b2:"Сообщить о проблеме"},
+  ar:{nav_forum:"المنتدى",forum_k:"المجتمع",forum_h:"ادخل المنتدى",forum_p:"شارك آراءك، اطرح الأسئلة، وأبلغ عن المشاكل. نقرأ كل شيء.",forum_ch1:"آراء وأسئلة",forum_cp1:"أفكار، استفسارات، نصائح — تحدّث مع موسيقيين آخرين.",forum_b1:"افتح المنتدى",forum_ch2:"أبلغ عن مشكلة",forum_cp2:"وجدت خطأً؟ أخبرنا هنا، بلاغًا واحدًا في كل مرة.",forum_b2:"أبلغ عن مشكلة"}
+};
+for (const k in FT) Object.assign(T[k], FT[k]);
 function apply(code){
   const d = T[code]||T.en;
   document.documentElement.lang = code;
